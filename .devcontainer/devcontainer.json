@@ -1,0 +1,18 @@
+{
+    "name": "sam-expt",
+    "dockerComposeFile": ["docker-compose.yml","../docker-compose.yml"],
+    "service": "sam-devcontainer",
+    "workspaceFolder": "/workspace",
+    "features": {
+		"ghcr.io/devcontainers/features/aws-cli:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/go:1": {
+			"version": "latest"
+		},
+        "ghcr.io/devcontainers/features/python:1": {
+			"version": "latest"
+		}
+    },
+	"postCreateCommand": "sh .devcontainer/post-create.sh"
+}
