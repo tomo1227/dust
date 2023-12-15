@@ -1,5 +1,5 @@
 name: pull-request-test
-on: [pull-request]
+on: [pull_request]
 jobs:
   hello-checkout:
     runs-on: ubuntu-latest
