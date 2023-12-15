@@ -1,7 +1,7 @@
 {
-    "name": "sam-expt",
+    "name": "dust",
     "dockerComposeFile": ["docker-compose.yml","../docker-compose.yml"],
-    "service": "sam-devcontainer",
+    "service": "dust-devcontainer",
     "workspaceFolder": "/workspace",
     "features": {
 		"ghcr.io/devcontainers/features/aws-cli:1": {
