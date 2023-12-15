@@ -1,0 +1,10 @@
+name: pull-request-test
+on: [pull_request]
+jobs:
+  hello-checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          ls -al
+      - run: echo "Succeed PR!"
