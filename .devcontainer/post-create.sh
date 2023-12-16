@@ -12,8 +12,7 @@ pip install awscli-local
 awslocal --version
 
 go install github.com/cosmtrek/air@latest
-# go mod tidy
-# cd cmd/api
-# go mod tidy
-# cd ../..
-# air
+go mod tidy
+cd cmd/api
+go mod tidy
+air
