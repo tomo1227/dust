@@ -10,3 +10,9 @@ localstack --version
 
 pip install awscli-local
 awslocal --version
+
+go install github.com/cosmtrek/air@latest
+go mod tidy
+cd cmd/api
+go mod tidy
+air

@@ -27,3 +27,4 @@ volume/
 /.idea
 
 node_modules/
+db/mysql
