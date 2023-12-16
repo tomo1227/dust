@@ -1,18 +1,99 @@
 {
     "name": "dust",
-    "dockerComposeFile": ["docker-compose.yml","../docker-compose.yml"],
-    "service": "dust-devcontainer",
+    "dockerComposeFile": [
+        "docker-compose.yml",
+        "../docker-compose.yml"
+    ],
+    "service": "devcontainer",
     "workspaceFolder": "/workspace",
     "features": {
-		"ghcr.io/devcontainers/features/aws-cli:1": {
-			"version": "latest"
-		},
-		"ghcr.io/devcontainers/features/go:1": {
-			"version": "latest"
-		},
+        "ghcr.io/devcontainers/features/aws-cli:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/go:1": {
+            "version": "latest"
+        },
         "ghcr.io/devcontainers/features/python:1": {
-			"version": "latest"
-		}
+            "version": "latest"
+        }
     },
-	"postCreateCommand": "sh .devcontainer/post-create.sh"
+    "postCreateCommand": "sh .devcontainer/post-create.sh",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.guides.bracketPairs": true,
+                // "editor.stickyScroll.enabled": true,
+                // "editor.stickyScroll.maxLineCount": 5,
+                // "workbench.colorCustomizations": {
+                //     "editorStickyScroll.background": "#00708D",
+                //     "editorStickyScrollHover.background": "#59A2B5"
+                // },
+                "editor.formatOnSave": true,
+                "[typescriptreact]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[javascript]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[go]": {
+                    "editor.formatOnSave": true,
+                    "editor.defaultFormatter": "golang.go"
+                },
+                "[python]": {
+                    // "diffEditor.ignoreTrimWhitespace": false,
+                    // "gitlens.codeLens.symbolScopes": [
+                    // 	"!Module"
+                    // ]
+                    "editor.defaultFormatter": "ms-python.black-formatter"
+                },
+                "go.toolsManagement.autoUpdate": true,
+                "go.formatTool": "gofmt",
+                // "[proto3]": {
+                //     "editor.defaultFormatter": "xaver.clang-format"
+                // },
+                // "clang-format.language.proto.style": "{ IndentWidth: 4, BasedOnStyle: Google }", .clang-format より優先される
+                "clang-format.executable": "/usr/bin/clang-format"
+            },
+            "extensions": [
+                "ms-vscode.live-server",
+                "ms-vscode.makefile-tools",
+                "ms-python.python",
+                "GitHub.vscode-pull-request-github",
+                "github.vscode-github-actions",
+                "ms-python.black-formatter",
+                "esbenp.prettier-vscode",
+                // "GitHub.copilot",
+                // "GitHub.copilot-labs",
+                // "GitHub.copilot-chat",
+                "mhutchie.git-graph",
+                "eamodio.gitlens",
+                "donjayamanne.githis",
+                "github.vscode-github-actions",
+                "adpyke.vscode-sql-formatter",
+                "streetsidesoftware.code-spell-checker",
+                "naumovs.color-highlight",
+                "burkeholland.simple-react-snippets",
+                "formulahendry.auto-rename-tag",
+                "MariusAlchimavicius.json-to-ts",
+                "dsznajder.es7-react-js-snippets",
+                "styled-components.vscode-styled-components",
+                "42Crunch.vscode-openapi",
+                "hashicorp.terraform",
+                "tamasfe.even-better-toml",
+                "graphql.vscode-graphql",
+                "graphql.vscode-graphql-syntax",
+                //
+                "Gruntfuggly.todo-tree",
+                "seatonjiang.gitmoji-vscode",
+                "oderwat.indent-rainbow",
+                "pkief.material-icon-theme",
+                "amazonwebservices.aws-toolkit-vscode",
+                "mark-tucker.aws-cli-configure",
+                "premparihar.gotest",
+                "ms-azuretools.vscode-docker"
+                // "zxh404.vscode-proto3",
+                // "xaver.clang-format"
+            ]
+        }
+    }
 }
