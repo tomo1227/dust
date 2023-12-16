@@ -1,4 +1,3 @@
-ARG VARIANT="jammy"
-FROM mcr.microsoft.com/vscode/devcontainers/base:${VARIANT}
+FROM ubuntu:jammy
 RUN apt-get update && apt-get install -y vim
 RUN apt-get install -y curl
