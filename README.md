@@ -94,11 +94,11 @@ main にマージするときは`squash and merge`すること
 git config --global commit.template .commit.template
 ```
 
-## commit message 規則
+## Commit Message ガイドライン
 
 .commit template を参考に記述してください
 
-## Pull Request 規則
+## Pull Request ガイドライン
 
 `[emoji][type]([scope]): (title)`
 
