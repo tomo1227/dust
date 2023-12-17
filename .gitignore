@@ -28,3 +28,5 @@ volume/
 
 node_modules/
 db/mysql
+
+tmp

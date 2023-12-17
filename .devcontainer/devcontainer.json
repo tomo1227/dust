@@ -17,7 +17,8 @@
             "version": "latest"
         }
     },
-    "postCreateCommand": "sh .devcontainer/post-create.sh",
+    "postCreateCommand": "sh .devcontainer/post_create.sh",
+    "postStartCommand": "sh .devcontainer/post_start.sh",
     "customizations": {
         "vscode": {
             "settings": {
@@ -29,12 +30,12 @@
                 //     "editorStickyScrollHover.background": "#59A2B5"
                 // },
                 "editor.formatOnSave": true,
-                "[typescriptreact]": {
-                    "editor.defaultFormatter": "esbenp.prettier-vscode"
-                },
-                "[javascript]": {
-                    "editor.defaultFormatter": "esbenp.prettier-vscode"
-                },
+                // "[typescriptreact]": {
+                //     "editor.defaultFormatter": "esbenp.prettier-vscode"
+                // },
+                // "[javascript]": {
+                //     "editor.defaultFormatter": "esbenp.prettier-vscode"
+                // },
                 "[go]": {
                     "editor.formatOnSave": true,
                     "editor.defaultFormatter": "golang.go"
@@ -46,6 +47,9 @@
                     // ]
                     "editor.defaultFormatter": "ms-python.black-formatter"
                 },
+                // "[markdown]": {
+                //     "editor.formatOnSave": false
+                // },
                 "go.toolsManagement.autoUpdate": true,
                 "go.formatTool": "gofmt",
                 // "[proto3]": {
@@ -61,7 +65,7 @@
                 "GitHub.vscode-pull-request-github",
                 "github.vscode-github-actions",
                 "ms-python.black-formatter",
-                "esbenp.prettier-vscode",
+                // "esbenp.prettier-vscode",
                 // "GitHub.copilot",
                 // "GitHub.copilot-labs",
                 // "GitHub.copilot-chat",
