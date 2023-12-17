@@ -17,7 +17,8 @@
             "version": "latest"
         }
     },
-    "postCreateCommand": "sh .devcontainer/post-create.sh",
+    "postCreateCommand": "sh .devcontainer/post_create.sh",
+    "postStartCommand": "sh .devcontainer/post_start.sh",
     "customizations": {
         "vscode": {
             "settings": {

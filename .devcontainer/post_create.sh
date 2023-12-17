@@ -4,8 +4,6 @@
 sudo apt-get update && sudo apt-get install bash-completion
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
 echo "source ~/.git-completion.bash" >> ~/.bashrc
-git config pull.rebase false
-git config --global commit.template .commit_template
 
 echo "pip Installing"
 pip install --upgrade aws-sam-cli
@@ -24,4 +22,3 @@ go install github.com/cosmtrek/air@latest
 go mod tidy
 cd cmd/api
 go mod tidy
-
