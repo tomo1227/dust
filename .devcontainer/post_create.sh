@@ -1,9 +1,10 @@
 #!/usr/bin/env sh
 
-# bash auto completion
-sudo apt-get update && sudo apt-get install bash-completion
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
 echo "source ~/.git-completion.bash" >> ~/.bashrc
+
+# bash auto completion
+sudo apt-get update && sudo apt-get install bash-completion
 
 echo "pip Installing"
 pip install --upgrade aws-sam-cli
@@ -15,10 +16,13 @@ echo "localstack Installing"
 pip install localstack
 localstack --version
 
+echo "awscli-local Installing"
 pip install awscli-local
 awslocal --version
 
+echo "air Installing"
 go install github.com/cosmtrek/air@latest
+
 go mod tidy
 cd cmd/api
 go mod tidy
