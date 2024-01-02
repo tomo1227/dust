@@ -20,7 +20,7 @@
     },
     // "initializeCommand": "aws-vault exec admin_role -- env | grep AWS > .env",
     "postCreateCommand": "sh .devcontainer/post_create.sh",
-    "postStartCommand": "sh .devcontainer/post_start.sh",
+    "postStartCommand": "sh .devcontainer/post_start.sh ${containerWorkspaceFolder}",
     "customizations": {
         "vscode": {
             "settings": {
