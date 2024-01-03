@@ -15,10 +15,12 @@
         },
         "ghcr.io/devcontainers/features/python:1": {
             "version": "latest"
-        }
+        },
+        "ghcr.io/devcontainers/features/terraform:1": {}
     },
+    // "initializeCommand": "aws-vault exec admin_role -- env | grep AWS > .env",
     "postCreateCommand": "sh .devcontainer/post_create.sh",
-    "postStartCommand": "sh .devcontainer/post_start.sh",
+    "postStartCommand": "sh .devcontainer/post_start.sh ${containerWorkspaceFolder}",
     "customizations": {
         "vscode": {
             "settings": {
@@ -47,6 +49,20 @@
                     // ]
                     "editor.defaultFormatter": "ms-python.black-formatter"
                 },
+                "[terraform]": {
+                    "editor.defaultFormatter": "hashicorp.terraform",
+                    "editor.formatOnSave": true,
+                    "editor.codeActionsOnSave": {
+                        "source.formatAll.terraform": true
+                    }
+                },
+                "[terraform-vars]": {
+                    "editor.defaultFormatter": "hashicorp.terraform",
+                    "editor.formatOnSave": true,
+                    "editor.codeActionsOnSave": {
+                        "source.formatAll.terraform": true
+                    }
+                },
                 // "[markdown]": {
                 //     "editor.formatOnSave": false
                 // },
@@ -65,6 +81,7 @@
                 "GitHub.vscode-pull-request-github",
                 "github.vscode-github-actions",
                 "ms-python.black-formatter",
+                "hashicorp.terraform",
                 // "esbenp.prettier-vscode",
                 // "GitHub.copilot",
                 // "GitHub.copilot-labs",
