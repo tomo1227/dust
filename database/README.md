@@ -11,7 +11,7 @@
 │   ├── config.toml # database 接続設定
 │   └── migrations   # migration ファイル
 │       └── 20230313033911-create_users.sql
-└── goose.sh   # sql-migration 実行コマンド
+└── goose.sh   # migration 実行コマンド
 ```
 
 ## migration の一括実行
