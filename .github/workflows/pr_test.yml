@@ -51,6 +51,7 @@ jobs:
             fi
           done
 
+
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v2 
         with:
@@ -63,7 +64,7 @@ jobs:
         with:
           imageName: ghcr.io/tomo1227/dust-devcontainer
           runCmd: |
-            ls
-            pwd
+            apt install mysql-server
+            mysql -h mysql -udust -ptest
             go list -f '{{.Dir}}/...' -m | WORKSPACE_DIR=$(pwd) xargs go test -cover -v
           

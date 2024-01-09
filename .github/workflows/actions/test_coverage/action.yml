@@ -15,6 +15,4 @@ runs:
       with:
         imageName: ghcr.io/tomo1227/dust-devcontainer
         runCmd: |
-          ls
-          pwd
           go list -f '{{.Dir}}/...' -m | WORKSPACE_DIR=$(pwd) xargs go test -cover -v
