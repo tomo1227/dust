@@ -14,9 +14,8 @@ runs:
   - name: Build and run Dev Container task
     uses: devcontainers/ci@v0.3
     with:
-      imageName: ghcr.io/example/example-devcontainer
+      imageName: ghcr.io/tomo1227/dust-devcontainer
       runCmd: |
-        # Add multiple commands to run if needed
         make install-packages
         make ci-build
         go list -f '{{.Dir}}/...' -m | WORKSPACE_DIR=$(shell pwd) xargs go test -cover -v
