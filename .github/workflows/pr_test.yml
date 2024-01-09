@@ -53,4 +53,4 @@ jobs:
       # テスト実行＆カバレッジ取得
       - name: Run test and create report
         # if: steps.check_go_files_changed.outputs.GO_FILES_CHANGED == 'true'
-        uses: ./.github/workflows/actions/test_coverage.yml
+        uses: ./.github/workflows/actions/test_coverage
