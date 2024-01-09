@@ -14,7 +14,6 @@ runs:
   - name: Build and run Dev Container task
     uses: devcontainers/ci@v0.3
     with:
-      # Change this to point to your image name
       imageName: ghcr.io/example/example-devcontainer
       # Change this to be your CI task/script
       runCmd: |
