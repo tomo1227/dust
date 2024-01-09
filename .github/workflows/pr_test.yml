@@ -52,20 +52,8 @@ jobs:
           done
           
       # テスト実行＆カバレッジ取得
-      # - name: Run test and create report
-      #   uses: ./.github/workflows/actions/test_coverage
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v2 
+      - name: Run test and create report
+        uses: ./.github/workflows/actions/test_coverage
         with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-  
-      - name: Build and run Dev Container task
-        uses: devcontainers/ci@v0.3
-        with:
-          imageName: ghcr.io/tomo1227/dust-devcontainer
-          runCmd: |
-            make install-packages
-            make ci-build
-            go list -f '{{.Dir}}/...' -m | WORKSPACE_DIR=$(shell pwd) xargs go test -cover -v
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
