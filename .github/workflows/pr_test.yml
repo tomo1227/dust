@@ -64,7 +64,6 @@ jobs:
         with:
           imageName: ghcr.io/tomo1227/dust-devcontainer
           runCmd: |
-            apt install mysql-server
             mysql -h mysql -udust -ptest
             go list -f '{{.Dir}}/...' -m | WORKSPACE_DIR=$(pwd) xargs go test -cover -v
           
