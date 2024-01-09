@@ -17,4 +17,4 @@ runs:
         runCmd: |
           ls
           pwd
-          go list -f '{{.Dir}}/...' -m | WORKSPACE_DIR=$(shell pwd) xargs go test -cover -v
+          go list -f '{{.Dir}}/...' -m | WORKSPACE_DIR=$(pwd) xargs go test -cover -v
