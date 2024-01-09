@@ -2,6 +2,7 @@ name: Run test and create report
 description: "run go test -cover and report"
 
 runs:
+  using: "composite"
   steps:
     # devcontainer起動
       - name: Build and run dev container task
