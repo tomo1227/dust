@@ -1,13 +1,15 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import "github.com/gofiber/fiber/v2"
 
 func main() {
-	r := gin.Default()
-	r.GET("/health", func(c *gin.Context) {
-		c.JSON(200, gin.H{
+	app := fiber.New()
+
+	app.Get("/health", func(c *fiber.Ctx) error {
+		return c.JSON(fiber.Map{
 			"status": "OK!",
 		})
 	})
-	r.Run()
+
+	app.Listen(":8080")
 }

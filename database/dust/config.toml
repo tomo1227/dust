@@ -1,0 +1,6 @@
+[database]
+user = "dust"
+password = "test"
+host = "mysql"
+dbname = "dust"
+parseTime = true
