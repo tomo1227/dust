@@ -50,6 +50,7 @@ jobs:
               break
             fi
           done
+          
       # テスト実行＆カバレッジ取得
       - name: Run test and create report
         uses: ./.github/workflows/actions/test_coverage
